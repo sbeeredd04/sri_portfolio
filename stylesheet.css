@@ -7,6 +7,7 @@
 
 body {
     color: #ededed;
+    background-color: #000;
 }
 
 .header {
@@ -15,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: linear-gradient(#000000 50%, transparent);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +48,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #0ef;
+    color: #7DF9FF;
 }
 
 .home {
@@ -82,7 +83,7 @@ body {
 }
 
 .text {
-    color: #0ef;
+    color: #7DF9FF;
 }
 
 .home-content h1 {
@@ -110,10 +111,10 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #7DF9FF;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #7DF9FF;
     text-decoration: none;
     transition: .5s ease;
     opacity: 0;
@@ -123,15 +124,15 @@ body {
 }
 
 .home-sci a:hover {
-    background: #0ef;
+    background: #7DF9FF;
     color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #7DF9FF;
 }
 
 .btn-box {
     display: inline-block;
     padding: 12px 20px;
-    background: #0ef;
+    background: #7DF9FF;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -142,8 +143,8 @@ body {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef,
-        0 0 25px #0ef,
+    box-shadow: 0 0 5px #7DF9FF,
+        0 0 25px #7DF9FF,
 
 }
 
@@ -152,8 +153,8 @@ body {
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan;
     background: transparent;
-    color: #0ef;
-    border: 2px solid #0ef;
+    color: #7DF9FF;
+    border: 2px solid #7DF9FF;
 }
 
 
@@ -165,13 +166,22 @@ body {
    padding: 5rem 10%;
 }
 
-.about-img img {
-    padding-bottom: 20%; 
+.about-img {
+    padding-bottom: 20%;
     max-width: 630px;
-    height: auto; 
-    width:100%; 
+    height: auto;
+    width: 100%;
     border-radius: 8px;
-}
+    opacity: 0;
+    transform: translateX(-50px); /* Start the image 50px left of its original position */
+    transition: opacity 1s linear, transform 1s linear; /* Apply the transition with a duration of 1 second and easing effect */
+  }
+  
+  .about-img.slide-in {
+    opacity: 1;
+    transform: translateX(0); /* Slide the image to its original position */
+  }
+  
 
 .about-text h2 { 
     font-size: 2.5rem; 
@@ -179,7 +189,20 @@ body {
     margin-bottom: 1rem; 
 }
 .about-text h2 span { 
-    color: #0ef; 
+    color: #7DF9FF; 
+}
+.about-text h4 { 
+    font-size: 30px; 
+    font-weight: 600; 
+    color: #fff; 
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p { 
+    color: alicebule;
+    font-size: 20px; 
+    line-height: 1.4; 
+    margin-bottom: 4rem;
 }
 
 @keyframes slideRight {
