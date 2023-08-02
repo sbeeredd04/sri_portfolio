@@ -207,7 +207,7 @@ body {
 }
 
 #services { 
-    color: cyan; 
+    color: aliceblue; 
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
@@ -278,7 +278,7 @@ body {
     font-weight: 600;
     opacity: 0;
     animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     box-shadow: 0 0 5px #7DF9FF,
         0 0 25px #7DF9FF, 
 }
@@ -293,7 +293,7 @@ body {
 }
 
 .services-list div:hover {
-    background: #7DF9FF;
+    background: radial-gradient(#040299f7, transparent);
     transform: translateY(-10px);
 }
 
