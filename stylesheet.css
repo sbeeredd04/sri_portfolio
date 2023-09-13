@@ -160,20 +160,24 @@ body {
 
 
 .about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex; /* Use flexbox instead of grid */
+    flex-wrap: wrap; /* Allow items to wrap to a new row when needed */
     align-items: center;
     gap: 1.5rem;
     padding: 5rem 10%;
 }
 
 .about-img {
-    padding-bottom: 20%;
-    max-width: 630px;
+    max-width: 100%;
+    flex: 1; /* Allow the image to grow as needed */
+}
+
+.about-img img {
+    max-width: 100%;
     height: auto;
-    width: 100%;
     border-radius: 8px;
-    opacity: 0;
+    display: block; /* Remove any extra spacing below the image */
+    /*opacity: 0;*/
     transform: translateX(-50px);
     /* Start the image 50px left of its original position */
     transition: opacity 1s linear, transform 1s linear;
@@ -186,6 +190,9 @@ body {
     /* Slide the image to its original position */
 }
 
+.about-text {
+    flex: 1.5; /* Allow the text to grow as needed */
+}
 
 .about-text h2 {
     font-size: 2.5rem;
@@ -197,16 +204,8 @@ body {
     color: #7DF9FF;
 }
 
-.about-text h4 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.7;
-    margin: 15px 0 30px;
-}
-
 .about-text p {
-    color: alicebule;
+    color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
@@ -382,7 +381,7 @@ body {
     transform-origin: left;
     margin: 20px;
     margin-bottom: 40px;
-}
+} 
 
 @keyframes animate { 
     100% { 
@@ -399,12 +398,10 @@ body {
 }
 
 /* progress in each programming language */
-.progress-line.Java span { 
-    width: 90%;
-}
 
 .progress-line.JavaScript span { 
-    width: 90%;
+    width: 70%;
+    margin-bottom: 40px;
 }
 
 .progress-line.Python span { 
@@ -412,12 +409,12 @@ body {
 }
 
 .progress-line.html span { 
-    width: 90%;
+    width: 80%;
 }
 
 .progress-line.css span { 
-    width: 90%;
-    margin-bottom: 40px;
+    width: 80%;
+
 }
 
 .progress-line span::after{
@@ -433,14 +430,9 @@ body {
     opacity: 0;
 }
 
-.progress-line.Java span::after { 
-    content: "90%"; 
-    font-size: 20px;
-    background: transparent;
-}
 
 .progress-line.JavaScript span::after { 
-    content: "90%"; 
+    content: "70%"; 
     font-size: 20px;
     background: transparent;
 }
@@ -452,13 +444,13 @@ body {
 }
 
 .progress-line.html span::after { 
-    content: "90%"; 
+    content: "80%"; 
     font-size: 20px;
     background: transparent;
 }
 
 .progress-line.css span::after { 
-    content: "90%"; 
+    content: "80%"; 
     font-size: 20px;
     background: transparent;
 }
@@ -484,7 +476,6 @@ body {
     }
 }
 
-/* radial bars in a grid format of 2 columns and 3 rows using wrap*/
 .radial-bars {
     width: 75%;
     margin: 120px;
@@ -494,14 +485,13 @@ body {
     align-items: flex-start;
   }
   
-
-/* radial bar customization*/
 .radial-bars .radial-bar { 
     width: 50%;
     height: 200px;
     margin-bottom: 50px;
     position: relative;
-}
+} 
+
 
 .radial-bars .radial-bar svg { 
     position: absolute;
@@ -559,13 +549,13 @@ body {
 
 @keyframes animate-path3 { 
     100% { 
-        stroke-dashoffset: 150; 
+        stroke-dashoffset: 100; 
     }
 }
 
 @keyframes animate-path4 { 
     100% { 
-        stroke-dashoffset: 100; 
+        stroke-dashoffset: 50; 
     }
 }
 
@@ -577,13 +567,13 @@ body {
 
 @keyframes animate-path6 { 
     100% { 
-        stroke-dashoffset: 100; 
+        stroke-dashoffset: 50; 
     }
 }
 
 @keyframes animate-path7 { 
     100% { 
-        stroke-dashoffset: 100; 
+        stroke-dashoffset: 50; 
     }
 }
 
