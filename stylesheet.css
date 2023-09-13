@@ -404,6 +404,10 @@ body {
     margin-bottom: 40px;
 }
 
+.progress-line.Java span { 
+    width: 90%;
+}
+
 .progress-line.Python span { 
     width: 90%;
 }
@@ -433,6 +437,12 @@ body {
 
 .progress-line.JavaScript span::after { 
     content: "70%"; 
+    font-size: 20px;
+    background: transparent;
+}
+
+.progress-line.Java span::after { 
+    content: "90%"; 
     font-size: 20px;
     background: transparent;
 }
